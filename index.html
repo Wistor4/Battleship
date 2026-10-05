@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Морской бой</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="page">
+        <header>
+            <h1>Морской бой</h1>
+            <p>Кликните по полю противника, чтобы сделать выстрел. ИИ ходит с небольшой  задержкой.</p>
+        </header>
+        <div id="victory-overlay" class="victory-overlay" aria-hidden="true">
+            <div class="victory-text">ПОБЕДА</div>
+        </div>
+
+        <main class="game-container">
+            <section class="boards">
+                <div class="board-panel">
+                    <h2>Ваше поле</h2>
+                    <div id="player-board" class="board"></div>
+                </div>
+
+                <div class="board-panel">
+                    <h2>Поле противника</h2>
+                    <div id="enemy-board" class="board"></div>
+                </div>
+            </section>
+
+            <aside class="info-panel">
+                <div class="stats">
+                    <h2>Статистика</h2>
+                    <div class="stat-row"><span>Ходов игрока:</span><span id="player-moves">0</span></div>
+                    <div class="stat-row"><span>Ходов ИИ:</span><span id="ai-moves">0</span></div>
+                    <div class="stat-row"><span>Кораблей игрока:</span><span id="player-ships">10</span></div>
+                    <div class="stat-row"><span>Кораблей ИИ:</span><span id="enemy-ships">10</span></div>
+                </div>
+
+                <div class="legend">
+                    <h2>Цвета
+                    </h2>
+                    <div class="legend-row"><span class="cell legend-cell ship"></span><span>Ваш корабль</span></div>
+                    <div class="legend-row"><span class="cell legend-cell miss"></span><span>Промах</span></div>
+                    <div class="legend-row"><span class="cell legend-cell hit"></span><span>Попадание</span></div>
+                </div>
+
+                <div class="log-panel">
+                    <h2>Ход игры</h2>
+                    <div id="log" class="log"></div>
+                </div>
+
+                <button id="new-game">Новая игра</button>
+            </aside>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
